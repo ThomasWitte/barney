@@ -69,10 +69,10 @@ class BWinScraper
 			get_request(@sporturls[name], headers, true) { |string|
 				text = text + string
 			}
-File.open("junk.html", "w") { |file|
-file.puts text
-file.close
-}
+#File.open("junk.html", "w") { |file|
+#file.puts text
+#file.close
+#}
 #game: team1, odd1, team2, odd2
 			@games[name] = text.scan(@reg_expr[name])
 			if(text == "")

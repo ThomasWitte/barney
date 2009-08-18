@@ -87,7 +87,7 @@ void MainWindow::optimize_gamelist(QVector<Game>& gamelist) {
             }
         }
 
-        if(!exists) {
+        if(!exists && !gamelist.at(i).team1.contains("nil") && !gamelist.at(i).team2.contains("nil")) {
             optgames.push_back(gamelist.at(i));
         }
     }
