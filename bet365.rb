@@ -26,26 +26,26 @@ class Bet365Scraper
 		}
 		@games = {}
 		@teams = {
-#			"Arizona Diamondbacks"=>"Arizona D-Backs",
+			"ARI Diamondbacks"=>"Arizona D-Backs",
 			"ATL Braves"=>"Atlanta Braves",
-#			"Baltimore Orioles"=>"Baltimore Orioles",
+			"BAL Orioles"=>"Baltimore Orioles",
 			"BOS Red Sox"=>"Boston Red Sox",
 			"CHI Cubs"=>"Chicago Cubs",
 			"CIN Reds"=>"Cincinnati Reds",
-#			"Cleveland Indians"=>"Cleveland Indians",
+			"CLE Indians"=>"Cleveland Indians",
 			"COL Rockies"=>"Colorado Rockies",
 			"CHI White Sox"=>"Chicago White Sox",
 			"DET Tigers"=>"Detroit Tigers",
 			"FLA Marlins"=>"Florida Marlins",
 			"HOU Astros"=>"Houston Astros",
-#			"Kansas City Royals"=>"Kansas City Royals",
+			"KC Royals"=>"Kansas City Royals",
 			"LA Angels"=>"LAA Angels",
 			"LA Dodgers"=>"Los Angeles Dodgers",
 			"MIL Brewers"=>"Milwaukee Brewers",
 			"MIN Twins"=>"Minnesota Twins",
 			"NY Mets"=>"New York Mets",
 			"NY Yankees"=>"New York Yankees",
-#			"Oakland Athletics"=>"Oakland Athletics",
+			"OAK Athletics"=>"Oakland Athletics",
 			"PHI Phillies"=>"Philadelphia Phillies",
 			"PIT Pirates"=>"Pittsburgh Pirates",
 			"SD Padres"=>"San Diego Padres",
@@ -54,7 +54,7 @@ class Bet365Scraper
 			"STL Cardinals"=>"St Louis Cardinals",
 			"TB Rays"=>"Tampa Bay Rays",
 			"TEX Rangers"=>"Texas Rangers",
-#			"Toronto Bluejays"=>"Toronto Blue Jays",
+			"TOR Blue Jays"=>"Toronto Blue Jays",
 			"WAS Nationals"=>"Washington Nationals"
 		}
 	end
