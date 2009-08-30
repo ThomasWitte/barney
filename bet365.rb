@@ -22,7 +22,7 @@ class Bet365Scraper
 			'Baseball' => 100
 		}
 		@reg_expr = {
-			'Baseball/MLB' => /<tr class="rh1">.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>([^&]+)&nbsp;<br>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>(\d{1,2}.\d{2})<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td><\/tr>.+?<tr class="c1 rh1">.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>([^<]+)<br>.+?<\/td>.+?<td [^>]+>(\d{1,2}.\d{2})<\/td>/m
+			'Baseball/MLB' => /<tr [^>]+>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>([^&]+)&nbsp;<br>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>(\d{1,2}.\d{2})<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>.+?<\/td><\/tr>.+?<tr [^>]+>.+?<td [^>]+>.+?<\/td>.+?<td [^>]+>([^<]+)<br>.+?<\/td>.+?<td [^>]+>(\d{1,2}.\d{2})<\/td>/m
 		}
 		@games = {}
 		@teams = {
@@ -74,7 +74,7 @@ class Bet365Scraper
 				"txtClassID" => "16",
 				"txtNPID" => "100000",
 				"txtSiteNavigationPB" => {
-					"c1id" => "20153629",
+					"c1id" => "20153737",
 					"c1idtable" => "48",
 					"c2id" => "1",
 					"c2idtable" => "36"
@@ -91,9 +91,9 @@ class Bet365Scraper
 				text = text + string
 			}
 
-#		File.open("junk.html", "w") { |file|
-#		file.write(text)
-#		file.close }
+		File.open("junk.html", "w") { |file|
+		file.write(text)
+		file.close }
 
 #game: team1, odd1, team2, odd2
 			@games[name] = text.scan(@reg_expr[name])
