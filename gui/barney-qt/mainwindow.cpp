@@ -154,14 +154,15 @@ void MainWindow::set_refresh_command(QStringList command) {
 }
 
 MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent), ui(new Ui::MainWindowClass)
+    : QMainWindow(parent), ui(new Ui::MainWindowClass), settings("barney", "barney-qt")
 {
     ui->setupUi(this);
 
-    set_xml_path("../../output");
+    set_xml_path(settings.value("xml_path", "../../output").toString());
 
     QStringList s;
-    s << "./main.rb" << "../.." << "";
+    s << "ruby" << "../.." << "main.rb";
+    s = settings.value("refresh_cmd", s).toStringList();
     set_refresh_command(s);
     updateAnbieterliste();
 
@@ -169,6 +170,9 @@ MainWindow::MainWindow(QWidget *parent)
 
 MainWindow::~MainWindow()
 {
+    settings.setValue("refresh_cmd", refresh_cmd);
+    settings.setValue("xml_path", xml_path);
+
     delete ui;
     for(int i = 0; i < anbieter.size(); i++) {
         delete anbieter.at(i);

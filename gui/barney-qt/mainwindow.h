@@ -40,6 +40,7 @@ private:
     QVector<Sportanbieter*> anbieter;
     QStringList refresh_cmd;
     QString xml_path;
+    QSettings settings;
 
     void optimize_gamelist(QVector<Game>& gamelist);
     void fill_grid(QVector<Game> gamelist);
